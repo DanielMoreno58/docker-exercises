@@ -22,4 +22,4 @@ En el Dockerfile se le dio la instruccion de crear un folder en nginx donde se c
 
 3. Se **corre el contenedor** adjuntando el html personalizado como un volumen con el siguiente comando
 
-`docker run -it --rm -p 8080:80 -v customIndex:/usr/share/nginx/html hw-1`
+`docker run -it --rm -p 8080:80 -v static_content:/usr/share/nginx/html hw-1`
