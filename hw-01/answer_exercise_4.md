@@ -8,18 +8,8 @@
 
 2. Se **corre el contenedor** para inicializarlo con el puerto 8080
 
-`docker run -it -p 8080:80 -v static_content:/usr/share/nginx/html go-healtcheck`
+`docker run -it -p 8080:80 go-healtcheck`
 
-3. Se teclea Control C para salir del proceso
-
-4. Se busca el contenedor mediante el siguiente comando:
-
-`docker ps -a`
-
-5. Se da start con el siguiente comando:
-
-`docker start <container_name>`
-
-6. Para visualizar el health check revisamos el estado con el siguiente comando:
+3. Se abre un nuevo terminal para verificar el proceso de healthcheck con el siguiente comando:
 
 `docker ps`
