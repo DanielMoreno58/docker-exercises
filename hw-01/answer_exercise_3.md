@@ -18,7 +18,7 @@ Con esto hemos creado el contenedor como tal que contiene una imagen con base de
 
 `docker build . -t hw-1`
 
-En el Dockerfile se le dio la instruccion de crear un folder en nginx donde se coloca el index html, posteriormente, se copio el html personalizado *(customIndex.html)* a la carpeta creada en ngnix para la personalizacion de la apgina de inicio.
+En el Dockerfile se le dio la instruccion de crear un folder en nginx donde se coloca el index html, posteriormente, se copio el html personalizado *(index.html)* a la carpeta creada en ngnix para la personalizacion de la apgina de inicio.
 
 3. Se **corre el contenedor** adjuntando el html personalizado como un volumen con el siguiente comando
 

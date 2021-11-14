@@ -5,4 +5,4 @@ FROM nginx:1.19.3
 WORKDIR /usr/share/nginx/html
 
 # Copy custom index html
-COPY customIndex.html /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
