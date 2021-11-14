@@ -1,0 +1,34 @@
+version: "3.6"
+services:
+  elasticsearch:
+    #Image
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+    #Container Name
+    container_name: elasticsearch
+    #Environment variables
+    environment:
+      - discovery.type=single-node
+    #Ports
+    ports:
+      - "9200:9200"
+    #Networks
+    networks:
+      - elastic
+  kibana:
+    #Image
+    image: docker.elastic.co/kibana/kibana:7.9.3
+    #Container Name
+    container_name: kibanaContainer
+    #Environment variables
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+    #Ports
+    ports:
+      - "5601:5601"
+    #Networks
+    networks:
+      - elastic
+networks:
+  elastic:
+    driver: bridge
